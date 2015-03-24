@@ -206,8 +206,9 @@ openni::Status SampleViewer::Init(int argc, char **argv)
 	#pragma region Menu
 	system("cls");
 	printf("Please select steering mode:\n");
-	printf("0. Kwiatek steering\n");
-	printf("1. First depth steering\n");
+	printf("0. Simple steering\n");
+	printf("1. Depth steering\n");
+	printf("2. Steering with clutches support\n");
 	printf("Enter number: ");
 	cin >> steering_mode; // Get user value for steering
 	#pragma endregion
@@ -459,6 +460,35 @@ void RunSteeringMethodTwo(map<string, map<char, float>> positions)
 		NXT::Motor::Stop(&comm, OUT_C, true);
 	}
 }
+
+void RunSteeringMethodThree(map<string, map<char, float>> positions)
+{
+	if(positions["right_hand"]['y'] > positions["right_shoulder"]['y'])
+	{
+		NXT::Motor::SetForward(&comm, OUT_A, 10);
+	} 
+	else if(positions["left_hand"]['y'] > (positions["left_shoulder"]['y'] - precisionX)) 
+	{
+		NXT::Motor::SetReverse(&comm, OUT_A, 10);
+	}  
+	else if(positions["right_hand"]['x'] > positions["right_hip"]['x']+100)
+	{
+		NXT::Motor::SetForward(&comm, OUT_B, 10);
+		NXT::Motor::SetForward(&comm, OUT_C, 10);
+	}
+	else if(positions["left_hand"]['x'] + 100 < positions["left_hip"]['x'])
+	{
+		NXT::Motor::SetReverse(&comm, OUT_B, 10);
+		NXT::Motor::SetReverse(&comm, OUT_C, 10);
+	}
+	else 
+	{
+		NXT::Motor::Stop(&comm, OUT_A, true);
+		NXT::Motor::Stop(&comm, OUT_B, true);
+		NXT::Motor::Stop(&comm, OUT_C, true);
+	}
+}
+
 #pragma endregion
 void SampleViewer::Display()
 {
@@ -686,6 +716,9 @@ void SampleViewer::Display()
 						break;
 					case 1:
 						RunSteeringMethodTwo(positions);						
+						break;
+					case 2:
+						RunSteeringMethodThree(positions);						
 						break;
 				}
 			}

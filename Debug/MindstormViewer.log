@@ -1,0 +1,51 @@
+﻿Build started 2015-03-24 14:04:25.
+     1>Project "E:\nxt-xtion\nxt-xtion\MindstormViewer.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\MindstormViewer.unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\OpenNI2\Include\\" /I. /I"C:\Program Files (x86)\PrimeSense\NiTE2\Include\\" /I. /I"C:\nxtpp0-6-3\FINAL\include\\" /ZI /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _ITERATOR_DEBUG_LEVEL=0 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Viewer.cpp
+         Viewer.cpp
+     1>c:\nxtpp0-6-3\final\include\fantom\tstatus.h(218): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\nxtpp0-6-3\final\include\fantom\tstatus.h(219): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(175) : see declaration of 'strncat'
+     1>c:\nxtpp0-6-3\final\include\fantom\tstatus.h(237): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\nxtpp0-6-3\final\include\fantom\tstatus.h(238): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(175) : see declaration of 'strncat'
+     1>c:\nxtpp0-6-3\final\include\fantom\tstatus.h(299): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\nxtpp0-6-3\final\include\fantom\tstatus.h(300): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(175) : see declaration of 'strncat'
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\nxt-xtion\nxt-xtion\Debug\MindstormViewer.exe" /NOLOGO /LIBPATH:"E:\nxt-xtion\nxt-xtion\Debug\\" /LIBPATH:"C:\Program Files (x86)\PrimeSense\NiTE2\Lib\\" /LIBPATH:"C:\Program Files (x86)\OpenNI2\Lib\\" /LIBPATH:..\..\..\Libs opengl32.lib NXT++.lib glut32.lib NiTE2.lib OpenNI2.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\MindstormViewer.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\nxt-xtion\nxt-xtion\Debug\MindstormViewer.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\nxt-xtion\nxt-xtion\Debug\MindstormViewer.lib" /MACHINE:X86 Debug\main.obj
+         Debug\Viewer.obj
+         NXT++.lib(nxt++.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+     1>LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+         Generating code
+     1>c:\nxtpp0-6-3\final\src\nxt++.cpp(88): warning C4789: destination of memory copy is too small
+         Finished generating code
+         MindstormViewer.vcxproj -> E:\nxt-xtion\nxt-xtion\Debug\MindstormViewer.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"E:\nxt-xtion\nxt-xtion\Debug\MindstormViewer.exe;#1" /manifest Debug\MindstormViewer.exe.intermediate.manifest
+       PostBuildEvent:
+         xcopy /D /S /F /Y "C:\Program Files (x86)\OpenNI2\Redist\\*" "E:\nxt-xtion\nxt-xtion\Debug\"
+         xcopy /D /S /F /Y "C:\Program Files (x86)\PrimeSense\NiTE2\Redist\\*" "E:\nxt-xtion\nxt-xtion\Debug\"
+         xcopy /D /F /Y "E:\nxt-xtion\nxt-xtion\\glut32.dll" "E:\nxt-xtion\nxt-xtion\Debug\"
+         
+         :VCEnd
+         C:\Program Files (x86)\OpenNI2\Redist\OpenNI2.jni.pdb -> E:\nxt-xtion\nxt-xtion\Debug\OpenNI2.jni.pdb
+         C:\Program Files (x86)\OpenNI2\Redist\OpenNI2.pdb -> E:\nxt-xtion\nxt-xtion\Debug\OpenNI2.pdb
+         Liczba skopiowanych plików: 2.
+         C:\Program Files (x86)\PrimeSense\NiTE2\Redist\NiTE2.jni.pdb -> E:\nxt-xtion\nxt-xtion\Debug\NiTE2.jni.pdb
+         C:\Program Files (x86)\PrimeSense\NiTE2\Redist\NiTE2.pdb -> E:\nxt-xtion\nxt-xtion\Debug\NiTE2.pdb
+         Liczba skopiowanych plików: 2.
+         Liczba skopiowanych plików: 0.
+       FinalizeBuildStatus:
+         Deleting file "Debug\MindstormViewer.unsuccessfulbuild".
+         Touching "Debug\MindstormViewer.lastbuildstate".
+     1>Done Building Project "E:\nxt-xtion\nxt-xtion\MindstormViewer.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.60

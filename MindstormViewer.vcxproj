@@ -76,7 +76,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(OutDir);$(NITE2_LIB);$(OPENNI2_LIB);..\..\..\Libs;C:\nxtpp0-6-3\FINAL\bin\win32</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(OutDir);$(NITE2_LIB);$(OPENNI2_LIB);..\..\..\Libs;$(NXT++_LIB)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;NXT++.lib;glut32.lib;NiTE2.lib;OpenNI2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
