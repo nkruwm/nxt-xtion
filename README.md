@@ -3,13 +3,18 @@ Gesture controller for NXT using xtion camera
 
 # Installation
 Steps needed to proper compilation:
+
   1) Download project
+  
   2) Download project dll's from: https://github.com/nkruwm/nxt-xtion-dll
+  
   3) Unzip dll's to main project folder (nxt-xtion)
+  
 Compile using Visual Studio 2010.
 
 # Usage/Steering
 There are 3 methods of steering:
+
   1) Simple steering
     
   2) Depth steering
@@ -18,6 +23,9 @@ There are 3 methods of steering:
     
     
 # Authors
+
   Michał Kwiatek
+  
   Adam Augustyniak
+  
   Łukasz Żmudziński
