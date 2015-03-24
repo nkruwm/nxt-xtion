@@ -10,7 +10,7 @@ Steps needed to proper compilation:
   
   3) Unzip dll's to main project folder (nxt-xtion)
   
-Compile using Visual Studio 2010.
+  4) Compile using Visual Studio 2010.
 
 # Usage/Steering
 There are 3 methods of steering:
