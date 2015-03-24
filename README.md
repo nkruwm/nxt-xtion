@@ -3,7 +3,21 @@ Gesture controller for NXT using xtion camera
 
 # Installation
 Steps needed to proper compilation:
-- From website: http://structure.io/openni download **OpenNi 2 32bit (x86)** [(Download)](http://com.occipital.openni.s3.amazonaws.com/OpenNI-Windows-x86-2.2.0.33.zip)
-- Download **Nite2 32 bit (x86)** [(Download)](https://docs.google.com/file/d/0B3e4_6C5_YOjQWtCcVl3VnRsWG8/edit)
-- To **C:\nxtpp0-6-3** put **nxt++** lib [(Download)](http://wmii.uwm.edu.pl/~artem/nxtpp0-6-3.zip)
+  1) Download project
+  2) Download project dll's from: https://github.com/nkruwm/nxt-xtion-dll
+  3) Unzip dll's to main project folder (nxt-xtion)
 Compile using Visual Studio 2010.
+
+# Usage/Steering
+There are 3 methods of steering:
+  1) Simple steering
+    
+  2) Depth steering
+    
+  3) Steering with clutches support
+    
+    
+# Authors
+  Michał Kwiatek
+  Adam Augustyniak
+  Łukasz Żmudziński
