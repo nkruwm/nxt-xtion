@@ -648,7 +648,7 @@ void SampleViewer::Display()
 			}
 
 			//Mindstorm main program
-			if (users[i].getSkeleton().getState() == nite::SKELETON_TRACKED && mindstrom_connection_open && user.getId() == 1)
+			if (users[i].getSkeleton().getState() == nite::SKELETON_TRACKED && mindstrom_connection_open && user.getId() == 1) //&& user.getId() == 1
 			{	
 				#pragma region Assigning joints
 				// Steering variables
@@ -727,7 +727,7 @@ void SampleViewer::Display()
 		if (m_poseUser == 0 || m_poseUser == user.getId())
 		{
 			const nite::PoseData& pose = user.getPose(nite::POSE_CROSSED_HANDS);
-
+			
 			if (pose.isEntered())
 			{
 				// Start timer

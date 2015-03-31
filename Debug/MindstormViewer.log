@@ -1,7 +1,7 @@
-﻿Build started 2015-03-24 14:04:25.
+﻿Build started 2015-03-31 14:07:31.
      1>Project "E:\nxt-xtion\nxt-xtion\MindstormViewer.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Touching "Debug\MindstormViewer.unsuccessfulbuild".
+         Creating "Debug\MindstormViewer.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\OpenNI2\Include\\" /I. /I"C:\Program Files (x86)\PrimeSense\NiTE2\Include\\" /I. /I"C:\nxtpp0-6-3\FINAL\include\\" /ZI /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _ITERATOR_DEBUG_LEVEL=0 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Viewer.cpp
          Viewer.cpp
@@ -34,12 +34,8 @@
          xcopy /D /F /Y "E:\nxt-xtion\nxt-xtion\\glut32.dll" "E:\nxt-xtion\nxt-xtion\Debug\"
          
          :VCEnd
-         C:\Program Files (x86)\OpenNI2\Redist\OpenNI2.jni.pdb -> E:\nxt-xtion\nxt-xtion\Debug\OpenNI2.jni.pdb
-         C:\Program Files (x86)\OpenNI2\Redist\OpenNI2.pdb -> E:\nxt-xtion\nxt-xtion\Debug\OpenNI2.pdb
-         Liczba skopiowanych plików: 2.
-         C:\Program Files (x86)\PrimeSense\NiTE2\Redist\NiTE2.jni.pdb -> E:\nxt-xtion\nxt-xtion\Debug\NiTE2.jni.pdb
-         C:\Program Files (x86)\PrimeSense\NiTE2\Redist\NiTE2.pdb -> E:\nxt-xtion\nxt-xtion\Debug\NiTE2.pdb
-         Liczba skopiowanych plików: 2.
+         Liczba skopiowanych plików: 0.
+         Liczba skopiowanych plików: 0.
          Liczba skopiowanych plików: 0.
        FinalizeBuildStatus:
          Deleting file "Debug\MindstormViewer.unsuccessfulbuild".
@@ -48,4 +44,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.60
+Time Elapsed 00:00:01.96
