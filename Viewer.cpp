@@ -467,21 +467,37 @@ void RunSteeringMethodThree(map<string, map<char, float>> positions)
 	{
 		NXT::Motor::SetForward(&comm, OUT_A, 10);
 	} 
-	else if(positions["left_hand"]['y'] > (positions["left_shoulder"]['y'] - precisionX)) 
+	else if(positions["left_hand"]['y'] > (positions["left_shoulder"]['y'] - precisionY)) 
 	{
 		NXT::Motor::SetReverse(&comm, OUT_A, 10);
 	}  
-	else if(positions["right_hand"]['x'] > positions["right_hip"]['x']+100)
+	else if(positions["right_hand"]['x'] > positions["right_hip"]['x'] + precisionX
+		&& positions["right_hand"]['y'] < positions["right_shoulder"]['y'])
 	{
-		NXT::Motor::SetForward(&comm, OUT_B, 10);
-		NXT::Motor::SetForward(&comm, OUT_C, 10);
+		NXT::Motor::SetForward(&comm, OUT_B, speed);
+		NXT::Motor::SetForward(&comm, OUT_C, speed);
 	}
-	else if(positions["left_hand"]['x'] + 100 < positions["left_hip"]['x'])
+	else if(positions["left_hand"]['x'] + 100 < positions["left_hip"]['x'] - precisionY
+		&& positions["left_hand"]['y'] < positions["left_shoulder"]['y'])
 	{
-		NXT::Motor::SetReverse(&comm, OUT_B, 10);
-		NXT::Motor::SetReverse(&comm, OUT_C, 10);
+		NXT::Motor::SetReverse(&comm, OUT_B, speed);
+		NXT::Motor::SetReverse(&comm, OUT_C, speed);
 	}
-	else 
+	else if(positions["left_hand"]['z'] + precisionX < positions["right_hand"]['z']
+		&& positions["left_hand"]['y'] < positions["torso"]['y']
+		&& positions["right_hand"]['y'] < positions["torso"]['y'])
+	{
+		NXT::Motor::SetReverse(&comm, OUT_C, speed);
+		NXT::Motor::SetForward(&comm, OUT_B, speed);
+	}
+	else if(positions["left_hand"]['z'] - precisionX > positions["right_hand"]['z']
+		&& positions["right_hand"]['y'] < positions["torso"]['y']
+		&& positions["left_hand"]['y'] < positions["torso"]['y'])
+	{
+		NXT::Motor::SetReverse(&comm, OUT_B, speed);
+		NXT::Motor::SetForward(&comm, OUT_C, speed);
+	}
+	else
 	{
 		NXT::Motor::Stop(&comm, OUT_A, true);
 		NXT::Motor::Stop(&comm, OUT_B, true);
